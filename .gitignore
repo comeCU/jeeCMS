@@ -19,6 +19,9 @@
 *.tar.gz
 *.rar
 
+# ignore datebase config file
+# db.properties
+
 # test ignore this file
 .classpath
 .project
