@@ -30,7 +30,7 @@ hs_err_pid*
 ############# add by dong 2019/4/29 ##############
 
 # ignore datebase config file
-# db.properties
+db.properties
 
 # create from Eclipse
 .springBeans
