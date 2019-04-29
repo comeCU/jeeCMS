@@ -19,16 +19,21 @@
 *.tar.gz
 *.rar
 
-# ignore datebase config file
-# db.properties
-
 # test ignore this file
 .classpath
 .project
 .settings
 
-# add by dong 2019/4/29
-.springBeans
-
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+############# add by dong 2019/4/29 ##############
+
+# ignore datebase config file
+# db.properties
+
+# create from Eclipse
+.springBeans
+
+# ignore .class file and others
+build/
