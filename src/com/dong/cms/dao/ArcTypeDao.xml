@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dong.cms.dao.ArcTypeDao">
+	<select id="list" parameterType="Map" resultType="ArcType">
+		select * from t_arctype
+		order by sortNo asc
+	</select>
+</mapper>

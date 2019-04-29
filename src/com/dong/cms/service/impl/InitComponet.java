@@ -10,7 +10,9 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.ContextLoader;
 
+import com.dong.cms.entity.ArcType;
 import com.dong.cms.entity.Link;
+import com.dong.cms.service.ArcTypeService;
 import com.dong.cms.service.LinkService;
 /**
  * 
@@ -43,10 +45,17 @@ public class InitComponet implements ServletContextListener {
     public void refreshSystem(ServletContext application) {
         // 拿到spring核心容器
         ApplicationContext act = ContextLoader.getCurrentWebApplicationContext();
+        
+        // 业务逻辑层拿到数据
         LinkService linkService = (LinkService) act.getBean("linkService");
         List<Link> linkList = linkService.list(null);
         
+        ArcTypeService arcTypeService = (ArcTypeService) act.getBean("arcTypeService");
+        List<ArcType> arcTypeList = arcTypeService.list(null);
+        
+        // 封装数据
         application.setAttribute("linkList", linkList);
+        application.setAttribute("arcTypeList", arcTypeList);
     }
 
 }
