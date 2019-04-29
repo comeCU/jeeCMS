@@ -27,6 +27,11 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	
+	<!-- 自定义的web服务器监听器，一定要注意放在spring监听器之后否则报空指针错 -->
+	<listener>
+		<listener-class>com.dong.cms.service.impl.InitComponet</listener-class>
+	</listener>
 
 	<!-- 编码过滤器 -->
 	<filter>
