@@ -11,8 +11,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.ContextLoader;
 
 import com.dong.cms.entity.ArcType;
+import com.dong.cms.entity.Article;
 import com.dong.cms.entity.Link;
 import com.dong.cms.service.ArcTypeService;
+import com.dong.cms.service.ArticleService;
 import com.dong.cms.service.LinkService;
 /**
  * 
@@ -53,9 +55,13 @@ public class InitComponet implements ServletContextListener {
         ArcTypeService arcTypeService = (ArcTypeService) act.getBean("arcTypeService");
         List<ArcType> arcTypeList = arcTypeService.list(null);
         
+        ArticleService articleService = (ArticleService) act.getBean("articleService");
+        List<Article> newestArticleList = articleService.getNewest();
+        
         // 封装数据
         application.setAttribute("linkList", linkList);
         application.setAttribute("arcTypeList", arcTypeList);
+        application.setAttribute("newestArticleList", newestArticleList);
     }
 
 }
