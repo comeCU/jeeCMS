@@ -35,39 +35,24 @@
 
 				<DIV style="width: 330px; height: 228px;" class="tuhuo">
 					<A href="" target="_blank"><IMG
-						style="width: 330px; height: 208px;" id="fou_img" src=""></A> <A
-						href="#"> <IMG style="display: none;" class="tu_img"
-						src="${pageContext.request.contextPath}/static/userImages/1.jpg"
-						width="330" height="208" />
-					</A> <A href="#"> <IMG style="display: none;" class="tu_img"
-						src="${pageContext.request.contextPath}/static/userImages/2.jpg"
-						width="330" height="208" />
-					</A> <A href="#"> <IMG style="display: none;" class="tu_img"
-						src="${pageContext.request.contextPath}/static/userImages/3.jpg"
-						width="330" height="208" />
-					</A> <A href="#"> <IMG style="display: none;" class="tu_img"
-						src="${pageContext.request.contextPath}/static/userImages/4.jpg"
-						width="330" height="208" />
-					</A> <A href="#"> <IMG style="display: none;" class="tu_img"
-						src="${pageContext.request.contextPath}/static/userImages/5.jpg"
-						width="330" height="208" />
-					</A>
+						style="width: 330px; height: 208px;" id="fou_img" src=""></A>
 
-					<P style="height: 20px;" class="tc">
-						<A href="#" target="_blank" title="1">1</A>
-					</P>
-					<P style="height: 20px;" class="tc">
-						<A href="#" target="_blank" title="2">2</A>
-					</P>
-					<P style="height: 20px;" class="tc">
-						<A href="#" target="_blank" title="3">3</A>
-					</P>
-					<P style="height: 20px;" class="tc">
-						<A href="#" target="_blank" title="4">4</A>
-					</P>
-					<P style="height: 20px;" class="tc">
-						<A href="#" target="_blank" title="5">5</A>
-					</P>
+					<c:forEach var="article" items="${slideArticleList }">
+						<A
+							href="${pageContext.request.contextPath}/article/${article.id}.html">
+							<IMG style="display: none;" class="tu_img"
+							src="${pageContext.request.contextPath}/static/userImages/${article.slideImage}"
+							width="330" height="208" />
+						</A>
+					</c:forEach>
+
+					<c:forEach var="article" items="${slideArticleList }">
+						<P style="height: 20px;" class="tc">
+							<A
+								href="${pageContext.request.contextPath}/article/${article.id}.html"
+								target="_blank" title="${article.title }">${fn:substring(article.title,0,18) }</A>
+						</P>
+					</c:forEach>
 
 					<UL>
 						<LI class="fouce">1</LI>
@@ -105,49 +90,18 @@
 			<div class="right">
 				<div class="data_list">
 					<div class="dataHeader">
-						Java基础<span class="more"><a href="/arcType/1.html">更多...</a></span>
+						推荐文章<span class="more"><a href="/arcType/1.html">更多...</a></span>
 					</div>
 					<div class="datas">
 						<ul>
 
-							<li>[11-05]&nbsp;&nbsp;<a href="/article/71.html"
-								title="Java中的关键字"><font color="">Java中的关键字</font></a></li>
-
-							<li>[11-05]&nbsp;&nbsp;<a href="/article/71.html"
-								title="Java中的关键字"><font color="">Java中的关键字</font></a></li>
-
-
-
-							<li>[11-05]&nbsp;&nbsp;<a href="/article/70.html"
-								title="Java标识符命名"><font color="">Java标识符命名</font></a></li>
-
-
-
-							<li>[11-05]&nbsp;&nbsp;<a href="/article/69.html"
-								title="java注释"><font color="">java注释</font></a></li>
-
-
-
-							<li>[11-05]&nbsp;&nbsp;<a href="/article/68.html"
-								title="Java HelloWorld实现及Java运行原理介绍"><font color="#FF0000">Java
-										HelloWorld实现及</font></a></li>
-
-
-
-							<li>[11-05]&nbsp;&nbsp;<a href="/article/67.html"
-								title="Java运行环境搭建之Jdk配置"><font color="#FF0000">Java运行环境搭建之Jdk配置</font></a></li>
-
-
-
-							<li>[11-05]&nbsp;&nbsp;<a href="/article/66.html"
-								title="Java简介"><font color="">Java简介</font></a></li>
-
-
-
-							<li>[11-05]&nbsp;&nbsp;<a href="/article/65.html"
-								title="Java HelloWorld实现"><font color="">Java
-										HelloWorld实现</font></a></li>
-
+							<c:forEach var="article" items="${recommendArticleList }">
+								<li><a target="_blank"
+									href="${pageContext.request.contextPath}/article/${article.id}.html"
+									title="${article.title }"><font
+										color="${article.titleColor }">${fn:substring(article.title,0,16) }</font></a></li>
+							</c:forEach>
+							
 						</ul>
 					</div>
 				</div>

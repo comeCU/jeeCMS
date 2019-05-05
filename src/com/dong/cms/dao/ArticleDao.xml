@@ -25,4 +25,18 @@
 		order by publishDate
 		desc limit 0,8
 	</select>
+	
+	<select id="getRecommend" resultMap="ArticleResult">
+		SELECT * FROM t_article
+		WHERE isRecommend = 1
+		ORDER BY publishDate
+		DESC LIMIT 0,8
+	</select>
+	
+	<select id="getSlide" resultMap="ArticleResult">
+		SELECT * FROM t_article
+		WHERE isSlide = 1
+		ORDER BY publishDate
+		DESC LIMIT 0,5
+	</select>
 </mapper>

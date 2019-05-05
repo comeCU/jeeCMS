@@ -58,10 +58,16 @@ public class InitComponet implements ServletContextListener {
         ArticleService articleService = (ArticleService) act.getBean("articleService");
         List<Article> newestArticleList = articleService.getNewest();
         
+        List<Article> recommendArticleList = articleService.getRecommend();
+        
+        List<Article> slideArticleList = articleService.getSlide();
+        
         // 封装数据
         application.setAttribute("linkList", linkList);
         application.setAttribute("arcTypeList", arcTypeList);
         application.setAttribute("newestArticleList", newestArticleList);
+        application.setAttribute("recommendArticleList", recommendArticleList);
+        application.setAttribute("slideArticleList", slideArticleList);
     }
 
 }

@@ -18,5 +18,17 @@ public interface ArticleDao {
      * @return
      */
     public List<Article> getNewest();
+    
+    /**
+     * 获取8篇最新推荐文章
+     * @return
+     */
+    public List<Article> getRecommend();
+    
+    /**
+     * 获取最新5条幻灯文章
+     * @return
+     */
+    public List<Article> getSlide();
 
 }

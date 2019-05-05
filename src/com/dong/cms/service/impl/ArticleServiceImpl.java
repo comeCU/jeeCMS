@@ -29,4 +29,16 @@ public class ArticleServiceImpl implements ArticleService {
         return articleDao.getNewest();
     }
 
+    @Override
+    public List<Article> getRecommend() {
+        // TODO Auto-generated method stub
+        return articleDao.getRecommend();
+    }
+
+    @Override
+    public List<Article> getSlide() {
+        // TODO Auto-generated method stub
+        return articleDao.getSlide();
+    }
+
 }
