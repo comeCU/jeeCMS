@@ -30,5 +30,12 @@ public interface ArticleDao {
      * @return
      */
     public List<Article> getSlide();
+    
+    /**
+     * 根据文章类别来查找对应最新的8条文章
+     * @param typeId
+     * @return
+     */
+    public List<Article> getIndex(Integer typeId);
 
 }

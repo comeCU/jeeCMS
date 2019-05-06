@@ -41,4 +41,10 @@ public class ArticleServiceImpl implements ArticleService {
         return articleDao.getSlide();
     }
 
+    @Override
+    public List<Article> getIndex(Integer typeId) {
+        // TODO Auto-generated method stub
+        return articleDao.getIndex(typeId);
+    }
+
 }

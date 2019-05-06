@@ -35,24 +35,22 @@
 
 				<DIV style="width: 330px; height: 228px;" class="tuhuo">
 					<A href="" target="_blank"><IMG
-						style="width: 330px; height: 208px;" id="fou_img" src=""></A>
-
+						style="width: 330px; height: 208px;" id="fou_img" src=""></A> 
+					
 					<c:forEach var="article" items="${slideArticleList }">
-						<A
-							href="${pageContext.request.contextPath}/article/${article.id}.html">
-							<IMG style="display: none;" class="tu_img"
-							src="${pageContext.request.contextPath}/static/userImages/${article.slideImage}"
-							width="330" height="208" />
-						</A>
-					</c:forEach>
-
-					<c:forEach var="article" items="${slideArticleList }">
-						<P style="height: 20px;" class="tc">
-							<A
-								href="${pageContext.request.contextPath}/article/${article.id}.html"
-								target="_blank" title="${article.title }">${fn:substring(article.title,0,18) }</A>
-						</P>
-					</c:forEach>
+					 <A href="${pageContext.request.contextPath}/article/${article.id}.html">
+					 	 <IMG style="display: none;" class="tu_img"
+						src="${pageContext.request.contextPath}/static/userImages/${article.slideImage}"
+						width="330" height="208" />
+					 </A> 
+					</c:forEach>	
+					
+				  <c:forEach var="article" items="${slideArticleList }">
+					  <P style="height: 20px;" class="tc">
+						<A href="${pageContext.request.contextPath}/article/${article.id}.html" 
+						target="_blank" title="${article.title }">${fn:substring(article.title,0,18) }</A>
+					  </P>
+				  </c:forEach>
 
 					<UL>
 						<LI class="fouce">1</LI>
@@ -107,322 +105,58 @@
 				</div>
 			</div>
 		</div>
-		<!-- 第二行 -->
-		<div class=" w960 article_row">
-			<div class="data_list article_list">
-				<div class="dataHeader">
-					Java基础<span class="more"><a href="/arcType/1.html">更多...</a></span>
-				</div>
-				<div class="datas">
-					<ul>
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/72.html"
-							title="Java基本数据类型-数据类型分类"><font color="">Java基本数据类型-数据类型分类</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/71.html"
-							title="Java中的关键字"><font color="">Java中的关键字</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/70.html"
-							title="Java标识符命名"><font color="">Java标识符命名</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/69.html"
-							title="java注释"><font color="">java注释</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/68.html"
-							title="Java HelloWorld实现及Java运行原理介绍"><font color="#FF0000">Java
-									HelloWorld实现及</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/67.html"
-							title="Java运行环境搭建之Jdk配置"><font color="#FF0000">Java运行环境搭建之Jdk配置</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/66.html"
-							title="Java简介"><font color="">Java简介</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/65.html"
-							title="Java HelloWorld实现"><font color="">Java
-									HelloWorld实现</font></a></li>
-
-					</ul>
-				</div>
-			</div>
-			<div class="data_list article_list" style="margin-left: 12px">
-				<div class="dataHeader">
-					Java基础<span class="more"><a href="/arcType/1.html">更多...</a></span>
-				</div>
-				<div class="datas">
-					<ul>
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/72.html"
-							title="Java基本数据类型-数据类型分类"><font color="">Java基本数据类型-数据类型分类</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/71.html"
-							title="Java中的关键字"><font color="">Java中的关键字</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/70.html"
-							title="Java标识符命名"><font color="">Java标识符命名</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/69.html"
-							title="java注释"><font color="">java注释</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/68.html"
-							title="Java HelloWorld实现及Java运行原理介绍"><font color="#FF0000">Java
-									HelloWorld实现及</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/67.html"
-							title="Java运行环境搭建之Jdk配置"><font color="#FF0000">Java运行环境搭建之Jdk配置</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/66.html"
-							title="Java简介"><font color="">Java简介</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/65.html"
-							title="Java HelloWorld实现"><font color="">Java
-									HelloWorld实现</font></a></li>
-
-					</ul>
-				</div>
-			</div>
-			<div class="data_list article_list" style="margin-left: 12px">
-				<div class="dataHeader">
-					Java基础<span class="more"><a href="/arcType/1.html">更多...</a></span>
-				</div>
-				<div class="datas">
-					<ul>
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/72.html"
-							title="Java基本数据类型-数据类型分类"><font color="">Java基本数据类型-数据类型分类</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/71.html"
-							title="Java中的关键字"><font color="">Java中的关键字</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/70.html"
-							title="Java标识符命名"><font color="">Java标识符命名</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/69.html"
-							title="java注释"><font color="">java注释</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/68.html"
-							title="Java HelloWorld实现及Java运行原理介绍"><font color="#FF0000">Java
-									HelloWorld实现及</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/67.html"
-							title="Java运行环境搭建之Jdk配置"><font color="#FF0000">Java运行环境搭建之Jdk配置</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/66.html"
-							title="Java简介"><font color="">Java简介</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/65.html"
-							title="Java HelloWorld实现"><font color="">Java
-									HelloWorld实现</font></a></li>
-
-					</ul>
-				</div>
-			</div>
-		</div>
-		<!-- 第三行 -->
-		<div class=" w960 article_row">
-			<div class="data_list article_list">
-				<div class="dataHeader">
-					Java基础<span class="more"><a href="/arcType/1.html">更多...</a></span>
-				</div>
-				<div class="datas">
-					<ul>
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/72.html"
-							title="Java基本数据类型-数据类型分类"><font color="">Java基本数据类型-数据类型分类</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/71.html"
-							title="Java中的关键字"><font color="">Java中的关键字</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/70.html"
-							title="Java标识符命名"><font color="">Java标识符命名</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/69.html"
-							title="java注释"><font color="">java注释</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/68.html"
-							title="Java HelloWorld实现及Java运行原理介绍"><font color="#FF0000">Java
-									HelloWorld实现及</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/67.html"
-							title="Java运行环境搭建之Jdk配置"><font color="#FF0000">Java运行环境搭建之Jdk配置</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/66.html"
-							title="Java简介"><font color="">Java简介</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/65.html"
-							title="Java HelloWorld实现"><font color="">Java
-									HelloWorld实现</font></a></li>
-
-					</ul>
-				</div>
-			</div>
-			<div class="data_list article_list" style="margin-left: 12px">
-				<div class="dataHeader">
-					Java基础<span class="more"><a href="/arcType/1.html">更多...</a></span>
-				</div>
-				<div class="datas">
-					<ul>
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/72.html"
-							title="Java基本数据类型-数据类型分类"><font color="">Java基本数据类型-数据类型分类</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/71.html"
-							title="Java中的关键字"><font color="">Java中的关键字</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/70.html"
-							title="Java标识符命名"><font color="">Java标识符命名</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/69.html"
-							title="java注释"><font color="">java注释</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/68.html"
-							title="Java HelloWorld实现及Java运行原理介绍"><font color="#FF0000">Java
-									HelloWorld实现及</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/67.html"
-							title="Java运行环境搭建之Jdk配置"><font color="#FF0000">Java运行环境搭建之Jdk配置</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/66.html"
-							title="Java简介"><font color="">Java简介</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/65.html"
-							title="Java HelloWorld实现"><font color="">Java
-									HelloWorld实现</font></a></li>
-
-					</ul>
-				</div>
-			</div>
-			<div class="data_list article_list" style="margin-left: 12px">
-				<div class="dataHeader">
-					Java基础<span class="more"><a href="/arcType/1.html">更多...</a></span>
-				</div>
-				<div class="datas">
-					<ul>
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/72.html"
-							title="Java基本数据类型-数据类型分类"><font color="">Java基本数据类型-数据类型分类</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/71.html"
-							title="Java中的关键字"><font color="">Java中的关键字</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/70.html"
-							title="Java标识符命名"><font color="">Java标识符命名</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/69.html"
-							title="java注释"><font color="">java注释</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/68.html"
-							title="Java HelloWorld实现及Java运行原理介绍"><font color="#FF0000">Java
-									HelloWorld实现及</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/67.html"
-							title="Java运行环境搭建之Jdk配置"><font color="#FF0000">Java运行环境搭建之Jdk配置</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/66.html"
-							title="Java简介"><font color="">Java简介</font></a></li>
-
-
-
-						<li>[11-05]&nbsp;&nbsp;<a href="/article/65.html"
-							title="Java HelloWorld实现"><font color="">Java
-									HelloWorld实现</font></a></li>
-
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-
-
-
-
-
-
+		
+		
+		<!-- 遍历6个版块，遍历的核心是48条数据 -->
+		<c:forEach var="subIndexArticleList" items="${allIndexArticleList }" varStatus="allStatus">
+			
+			<!-- 在我们循环每行的开始，问是否是第一个板块 -->
+			<c:if test="${allStatus.index%3==0 }"> <!-- 只要是每一行的第一个板块就要加包围它的div的开始，不需要确定是否是第一条数据 -->
+				<div class="w960 article_row">
+			</c:if>
+			
+			<!-- 遍历每个版块的每条数据 -->
+			<c:forEach var="indexArticle" items="${subIndexArticleList}" varStatus="oneStatus">
+				<c:if test="${oneStatus.first }"><!-- 遍历的是每个板块的是第一条数据 -->
+					<c:choose>
+						<c:when test="${allStatus.index%3==0 }"><!-- 是第一条数据的情况下，问下是否第一个板块 -->
+							<div class="data_list article_list">
+						</c:when>
+						<c:otherwise>
+							<div class="data_list article_list" style="margin-left: 12px">
+						</c:otherwise>
+					</c:choose>
+					<div class="dataHeader">
+						${arcTypeList.get(allStatus.index).typeName}<span class="more"><a
+							href="${pageContext.request.contextPath}/arcType/${arcTypeList.get(allStatus.index).id}.html">更多...</a></span>
+					</div>
+					<div class="datas">
+							<ul>
+				</c:if>
+						
+						<!-- 下面的li内容都是第二条到最后一条数据的循环 -->
+						<li>[<fmt:formatDate value="${indexArticle.publishDate }"	pattern="MM-dd" />]&nbsp;&nbsp;
+							<a	href="${pageContext.request.contextPath}/article/${indexArticle.id }.html"
+							title="${indexArticle.title }"><font
+								color="${indexArticle.titleColor }">${fn:substring(indexArticle.title,0,16) }</font>
+							</a>
+						</li>
+						
+						<!-- 先不区分板块，只要遍历到最后一条数据的循环 -->
+						<c:if test="${oneStatus.last }">
+							</ul>
+							</div>
+							</div>
+						</c:if>
+
+			</c:forEach>
+				<!-- 如果是该行的最后一个板块的最后一条数据的循环 -->
+				<c:if test="${allStatus.index%3==2 || allStatus.last}">
+					</div>
+				</c:if>
+			
+		</c:forEach>
+		
 
 	<jsp:include page="/common/link.jsp"></jsp:include>
 	<jsp:include page="/common/foot.jsp"></jsp:include>

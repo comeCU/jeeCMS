@@ -39,4 +39,11 @@
 		ORDER BY publishDate
 		DESC LIMIT 0,5
 	</select>
+	
+	<select id="getIndex" parameterType="Integer" resultMap="ArticleResult">
+		SELECT * FROM t_article
+		WHERE typeId = #{typeId}
+		ORDER BY publishDate
+		DESC LIMIT 0,8
+	</select>
 </mapper>
