@@ -316,3 +316,58 @@ zoom: 1;
 	padding-left: 15px;
 }
 
+
+
+
+.content .pLeft{
+	width: 700px;
+	float: left;
+}
+
+.content .pRight{
+	width: 250px;
+	float: right;
+}
+
+.article_title{
+	margin-top:20px;
+	text-align: center;
+}
+
+.article_content{
+    font-size:14px;
+	padding:10px;
+	margin-top:20px;
+	padding-bottom: 30px;
+}
+
+
+.navi{
+	font-weight: normal !important;
+	background-color: #F3F3F3;
+}
+
+.navi a{
+	text-decoration: none;
+	color: black;
+}
+
+
+
+
+.article_info{
+	text-align: center;
+}
+
+.article_summary{
+	width: 90%;
+    padding: 8px 16px;
+    line-height: 24px;
+    background: #f5fcee;
+    border: 1px solid #DCDDDD;
+    font-size: 14px;
+    color: #706A6A;
+    margin: 8px auto 0 auto;
+}
+
+

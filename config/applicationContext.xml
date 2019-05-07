@@ -28,7 +28,10 @@
          <property name="username" value="${jdbc.username}" />
          <!--连接数据库的密码 -->
          <property name="password" value="${jdbc.password}" />
-
+		 
+		 <!-- Druid数据源对数据库密码进行加解密 参考：https://github.com/alibaba/druid/wiki/%E4%BD%BF%E7%94%A8ConfigFilter -->
+		 <!-- <property name="filters" value="config" />
+     	 <property name="connectionProperties" value="config.decrypt=true;config.decrypt.key=${jdbc.publickey}" /> -->
 	</bean>
 
 	<!-- 配置mybatis的sqlSessionFactory -->

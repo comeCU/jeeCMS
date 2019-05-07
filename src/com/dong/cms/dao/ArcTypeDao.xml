@@ -7,4 +7,9 @@
 		select * from t_arctype
 		order by sortNo asc
 	</select>
+	
+	<!-- 嵌套的子查询 -->
+	<select id="findById" parameterType="Integer" resultType="ArcType">
+		select * from t_arcType where id=#{id}
+	</select>
 </mapper>

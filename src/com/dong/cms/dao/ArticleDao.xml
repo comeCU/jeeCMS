@@ -15,7 +15,7 @@
 		<result property="keyWords" column="keyWords"/>
 		<result property="slideImage" column="slideImage"/>
 		
-		<association property="arcType" column="arcType"
+		<association property="arcType" column="typeId"
 			select="com.dong.cms.dao.ArcTypeDao.findById"
 		></association>
 	</resultMap>
@@ -45,5 +45,10 @@
 		WHERE typeId = #{typeId}
 		ORDER BY publishDate
 		DESC LIMIT 0,8
+	</select>
+	
+	<select id="findById" parameterType="Integer" resultMap="ArticleResult">
+		SELECT * FROM t_article
+		WHERE id = #{id}
 	</select>
 </mapper>

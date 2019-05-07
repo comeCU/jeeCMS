@@ -37,4 +37,11 @@ public interface ArticleService {
      * @return
      */
     public List<Article> getIndex(Integer typeId);
+    
+    /**
+     * 通过id查询文章
+     * @param id
+     * @return
+     */
+    public Article findById(Integer id);
 }
