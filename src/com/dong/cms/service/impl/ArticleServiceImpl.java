@@ -53,4 +53,22 @@ public class ArticleServiceImpl implements ArticleService {
         return articleDao.findById(id);
     }
 
+    @Override
+    public Article getLastArticle(Integer id) {
+        // TODO Auto-generated method stub
+        return articleDao.getLastArticle(id);
+    }
+
+    @Override
+    public Article getNextArticle(Integer id) {
+        // TODO Auto-generated method stub
+        return articleDao.getNextArticle(id);
+    }
+
+    @Override
+    public Integer update(Article article) {
+        // TODO Auto-generated method stub
+        return articleDao.update(article);
+    }
+
 }

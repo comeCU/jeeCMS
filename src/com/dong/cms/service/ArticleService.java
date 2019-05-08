@@ -44,4 +44,25 @@ public interface ArticleService {
      * @return
      */
     public Article findById(Integer id);
+    
+    /**
+     * 获取上一个文章
+     * @param id
+     * @return
+     */
+    public Article getLastArticle(Integer id);
+    
+    /**
+     * 获取下一个文章
+     * @param id
+     * @return
+     */
+    public Article getNextArticle(Integer id);
+    
+    /**
+     * 更新文章
+     * @param article
+     * @return
+     */
+    public Integer update(Article article);
 }

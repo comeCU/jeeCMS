@@ -34,6 +34,22 @@
 							<strong>${article.title }</strong>
 						</h2>
 					</div>
+					
+					<!-- 引入bshare分享 -->
+					<div class="share">
+						<div class="bshare-custom">
+							<a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博"
+								class="bshare-sinaminiblog"></a><a title="分享到人人网"
+								class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a
+								title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台"
+								class="bshare-more bshare-more-icon more-style-addthis"></a><span
+								class="BSHARE_COUNT bshare-share-count">0</span>
+						</div>
+						<script type="text/javascript" charset="utf-8"
+							src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+						<script type="text/javascript" charset="utf-8"
+							src="http://static.bshare.cn/b/bshareC0.js"></script>
+					</div>
 
 
 					<div class="article_info">
@@ -46,11 +62,38 @@
 					<div class="article_summary">${article.summary }</div>
 
 
-
-
 					<div class="article_content">${article.content }</div>
+					
+					<div class="article_keyWord">
+						<font><strong>关键字：</strong></font>
+						<c:choose>
+							<c:when test="${keyWords==null }">
+								&nbsp;&nbsp;无
+							</c:when>
+							<c:otherwise>
+								<c:forEach var="keyWord" items="${keyWords }">
+								  &nbsp;&nbsp;<a href="##" target="_blank">${keyWord }</a>&nbsp;&nbsp;
+								</c:forEach>
+							</c:otherwise>
+						</c:choose>
+					</div>	
+					
+				</div>
+				
+				<div class="article_lastAndNextPage">
+					${pageCode }
 				</div>
 
+				<!--引入 畅言 评论API 高速版-->
+				<div id="SOHUCS" sid="${article.id}"></div>
+				<script charset="utf-8" type="text/javascript"
+					src="http://changyan.sohu.com/upload/changyan.js"></script>
+				<script type="text/javascript">
+					window.changyan.api.config({
+						appid : 'cyu3TGIaD',
+						conf : 'prod_b2c1eab0fbac945289a6b21e13c95562'
+					});
+				</script>
 
 			</div>
 

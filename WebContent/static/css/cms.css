@@ -371,3 +371,35 @@ zoom: 1;
 }
 
 
+.article_keyWord{
+	margin-top:20px;
+	padding-bottom: 30px;
+	padding-left: 30px;
+}
+
+.article_keyWord a{
+	text-decoration: none;
+	color: black;
+	font-size: 15px;
+	font-style: italic;
+}
+
+.share {
+	padding-left: 270px;
+	padding-bottom: 5px;
+	padding-top: 0px
+}
+
+.article_lastAndNextPage{
+	border-top:1px dotted black;
+	padding: 10px;
+}
+
+.article_lastAndNextPage p{
+	font-size: 14px;
+	margin: 5px;
+}
+
+.article_lastAndNextPage a{
+	text-decoration: none;
+}

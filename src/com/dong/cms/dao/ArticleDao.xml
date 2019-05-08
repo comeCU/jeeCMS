@@ -51,4 +51,26 @@
 		SELECT * FROM t_article
 		WHERE id = #{id}
 	</select>
+	
+	<select id="getLastArticle" parameterType="Integer" resultMap="ArticleResult">
+		SELECT * FROM t_article 
+		WHERE id &lt; #{id} 
+		ORDER BY id DESC LIMIT 1;
+	</select>
+	
+	<select id="getNextArticle" parameterType="Integer" resultMap="ArticleResult">
+		SELECT * FROM t_article 
+		WHERE id &gt; #{id} 
+		ORDER BY id ASC LIMIT 1;
+	</select>
+	
+	<update id="update" parameterType="Article">
+		update t_article
+			<set>
+				<if test="click!=0">
+					click=#{click},
+				</if>
+			</set>
+		where id=#{id}
+	</update>
 </mapper>
