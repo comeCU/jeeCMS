@@ -1,6 +1,7 @@
 package com.dong.cms.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import com.dong.cms.entity.Article;
 /**
@@ -65,4 +66,18 @@ public interface ArticleDao {
      * @return
      */
     public Integer update(Article article);
+    
+    /**
+     * 根据条件（目前条件栏目id，以后可能会变成其他条件，所以参数采用通用的map）查询文章
+     * @param map
+     * @return
+     */
+    public List<Article> list(Map<String,Object> map);
+    
+    /**
+     * 根据条件（目前条件栏目id，以后可能会变成其他条件，所以参数采用通用的map）获取文章总记录数
+     * @param map
+     * @return
+     */
+    public Long getTotal(Map<String,Object> map);
 }

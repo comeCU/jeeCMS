@@ -15,7 +15,7 @@ import java.util.Properties;
 public class PropertiesUtil {
     
     /**
-     * 根据key获取value
+     * 根据key获取value,数据写在配置文件cms.properties中
      * @param key
      * @return
      */

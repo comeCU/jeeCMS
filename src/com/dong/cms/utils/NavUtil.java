@@ -26,4 +26,17 @@ public class NavUtil {
         return navCode.toString();
     }
     
+    /**
+     * 根据文章类型名生成导航
+     * @param typeName
+     * @return
+     */
+    public static String getArticleListNavigation(String typeName) {
+        StringBuffer navCode = new StringBuffer();
+        navCode.append("当前位置：&nbsp;&nbsp;");
+        navCode.append("<a href='" + PropertiesUtil.getValue("host")+ "'>主页</a>&nbsp;&nbsp;>&nbsp;&nbsp;");
+        navCode.append(typeName);
+        return navCode.toString();
+    }
+    
 }

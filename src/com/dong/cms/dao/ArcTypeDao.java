@@ -20,4 +20,11 @@ public interface ArcTypeDao {
      * @return
      */
     public List<ArcType> list(Map<String, Object> map);
+    
+    /**
+     * 根据id查询文章类型实体
+     * @param id
+     * @return
+     */
+    public ArcType findById(Integer id);
 }

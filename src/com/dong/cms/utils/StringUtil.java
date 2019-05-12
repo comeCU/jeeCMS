@@ -15,10 +15,10 @@ import java.util.List;
 public class StringUtil {
 
     /**
-     * 判断是否不是空
+     * 判断是否为空
      * 
      * @param str
-     * @return
+     * @return 不为空返回true 否则返回false
      */
     public static boolean isNotEmpty(String str) {
         if (str != null && !" ".equals(str)) {

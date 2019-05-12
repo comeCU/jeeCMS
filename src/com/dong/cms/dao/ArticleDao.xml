@@ -73,4 +73,26 @@
 			</set>
 		where id=#{id}
 	</update>
+	
+	<select id="list" parameterType="Map" resultMap="ArticleResult">
+		select * from t_article
+		<where>
+			<if test="typeId != null">
+				and typeId = #{typeId}
+			</if>
+		</where>
+		order by publishDate desc
+		<if test="typeId != null">
+			limit #{start},#{size}
+		</if>
+	</select>
+	
+	<select id="getTotal" parameterType="Map" resultType="Long">
+		select count(*) from t_article
+		<where>
+			<if test="typeId != null">
+				and typeId = #{typeId}
+			</if>
+		</where>
+	</select>
 </mapper>

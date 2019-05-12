@@ -30,4 +30,10 @@ public class ArcTypeImpl implements ArcTypeService {
         return arcTypeDao.list(map);
     }
 
+    @Override
+    public ArcType findById(Integer id) {
+        // TODO Auto-generated method stub
+        return arcTypeDao.findById(id);
+    }
+
 }

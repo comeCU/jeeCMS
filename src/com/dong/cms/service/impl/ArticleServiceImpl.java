@@ -1,6 +1,7 @@
 package com.dong.cms.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -69,6 +70,18 @@ public class ArticleServiceImpl implements ArticleService {
     public Integer update(Article article) {
         // TODO Auto-generated method stub
         return articleDao.update(article);
+    }
+
+    @Override
+    public List<Article> list(Map<String, Object> map) {
+        // TODO Auto-generated method stub
+        return articleDao.list(map);
+    }
+
+    @Override
+    public Long getTotal(Map<String, Object> map) {
+        // TODO Auto-generated method stub
+        return articleDao.getTotal(map);
     }
 
 }

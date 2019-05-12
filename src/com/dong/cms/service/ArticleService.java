@@ -1,6 +1,7 @@
 package com.dong.cms.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.dong.cms.entity.Article;
 /**
@@ -65,4 +66,18 @@ public interface ArticleService {
      * @return
      */
     public Integer update(Article article);
+    
+    /**
+     * 根据条件查询文章
+     * @param map
+     * @return
+     */
+    public List<Article> list(Map<String, Object> map);
+    
+    /**
+     * 根据条件获取总记录数
+     * @param map
+     * @return
+     */
+    public Long getTotal(Map<String, Object> map);
 }

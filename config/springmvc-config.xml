@@ -15,7 +15,7 @@
     http://www.springframework.org/schema/tx 
     http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">  
 
-	<!-- 配置controller所在的包扫描 -->
+	<!-- 配置controller所在的包扫描。使用注解方式，比实现Controller接口方式更加灵活，可以同时处理多个请求动作。 -->
 	<context:component-scan base-package="com.dong.cms.controller" />
 	<!-- 配置注解驱动，包含controller注解支持，简化处理器映射器和适配器的配置（json处理） -->
 	<mvc:annotation-driven/>
